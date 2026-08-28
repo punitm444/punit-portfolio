@@ -14,6 +14,7 @@ const skills = [
   "Docker",
   "Kubernetes",
   "Ansible",
+  "Jenkins",
   "Linux",
   "Git & GitHub",
   "Bash",
