@@ -8,20 +8,60 @@ import {
   Mail,
 } from "lucide-react";
 
-const skills = [
-  "AWS",
-  "Terraform",
-  "Docker",
-  "Kubernetes",
-  "Ansible",
-  "Jenkins",
-  "Linux",
-  "Git & GitHub",
-  "Bash",
-  "Python",
-  "CI/CD",
-  "Machine Learning",
-  "SQL",
+const skillCategories = [
+  {
+    title: "Cloud & DevOps",
+    skills: [
+      "AWS",
+      "Azure",
+      "Terraform",
+      "Ansible",
+      "Docker",
+      "Kubernetes",
+      "K3s",
+      "Jenkins",
+      "Prometheus",
+      "Grafana",
+      "Amazon ECR",
+      "Linux",
+      "Bash",
+      "Git & GitHub",
+      "CI/CD",
+    ],
+  },
+  {
+    title: "AI / ML",
+    skills: [
+      "Python",
+      "Machine Learning",
+      "TensorFlow",
+      "PyTorch",
+      "Deep Learning",
+      "Generative AI",
+      "Rekognition",
+      "Data Preprocessing",
+      "Computer Vision",
+    ],
+  },
+  {
+    title: "Backend & Data",
+    skills: [
+      "FastAPI",
+      "SQL",
+      "MongoDB",
+      "SQLite",
+    ],
+  },
+  {
+    title: "Frontend",
+    skills: [
+      "HTML5",
+      "CSS3",
+      "Flexbox/Grid",
+      "Responsive Design",
+      "WCAG/ARIA",
+    ],
+  },
 ];
 
 const projects = [
@@ -103,6 +143,34 @@ const projects = [
       {
         label: "View Code",
         href: "https://github.com/SAbhinav04/crop_disease_detection",
+      },
+    ],
+  },
+  
+  {
+    number: "06",
+    title: "Self-Healing Kubernetes Monitoring Platform on AWS",
+    description:
+      "A cloud-native DevOps platform that deploys a FastAPI application on Kubernetes and demonstrates automatic pod recovery when failures occur. It uses Prometheus and Grafana for monitoring, Terraform for AWS infrastructure, and Jenkins for CI/CD automation.",
+    tech: [
+      "AWS",
+      "Terraform",
+      "Docker",
+      "Jenkins",
+      "Kubernetes",
+      "K3s",
+      "Prometheus",
+      "Grafana",
+      "Python",
+      "FastAPI",
+      "Linux",
+      "Bash",
+      "Amazon ECR",
+    ],
+    links: [
+      {
+        label: "View Code",
+        href: "https://github.com/punitm444/self-healing-kubernetes-monitoring-platform",
       },
     ],
   },
@@ -237,12 +305,13 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="max-w-4xl text-5xl font-semibold leading-[1.05] tracking-tight sm:text-7xl lg:text-8xl"
             >
-              I build{" "}
+              Software Engineer
+              <br />
               <span className="text-zinc-500">
-                reliable cloud
+                building cloud,
               </span>
               <br />
-              infrastructure.
+              AI & scalable systems.
             </motion.h1>
 
             <motion.p
@@ -255,9 +324,10 @@ export default function Home() {
               <span className="font-medium text-white">
                 Punit Murali
               </span>
-              , a DevOps Engineer focused on cloud infrastructure,
-              automation, Infrastructure as Code, and building reliable
-              systems.
+              , a Software Engineer working across Cloud/DevOps,
+              AI/ML, and Frontend development — building automated
+              infrastructure, intelligent applications, and reliable
+              software systems.
             </motion.p>
 
             <motion.div
@@ -296,13 +366,15 @@ export default function Home() {
               className="mt-14 flex flex-wrap gap-3"
             >
               {[
-                "AWS",
-                "Terraform",
-                "Docker",
-                "Kubernetes",
-                "Linux",
-                "Automation",
-              ].map((skill) => (
+                  "AWS",
+                  "Azure",
+                  "Cloud / DevOps",
+                  "Kubernetes",
+                  "Jenkins",
+                  "AI / ML",
+                  "Generative AI",
+                  "Frontend",
+                ].map((skill) => (
                 <span
                   key={skill}
                   className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-zinc-400"
@@ -402,7 +474,7 @@ export default function Home() {
         </button>
       </section>
 
-      {/* ABOUT */}
+     {/* ABOUT */}
       <section
         id="about"
         className="border-t border-white/[0.06] px-6 py-32"
@@ -412,52 +484,55 @@ export default function Home() {
             <p className="text-sm tracking-widest text-blue-400">
               01 — ABOUT
             </p>
-
+      
             <h2 className="mt-4 text-4xl font-semibold">
-              More than just
+              Building across
               <br />
-              infrastructure.
+              the stack.
             </h2>
           </div>
-
+      
           <div>
             <p className="text-xl leading-9 text-zinc-300">
-              I'm a DevOps and cloud infrastructure enthusiast with a
-              background spanning cloud engineering, automation,
-              artificial intelligence, machine learning, and software
-              development.
+              I'm a Software Engineer with a background spanning
+              Cloud/DevOps, artificial intelligence, machine learning,
+              and frontend development.
             </p>
-
+      
             <p className="mt-6 leading-8 text-zinc-500">
-              I enjoy understanding how systems work end-to-end — from
-              application development and machine learning models to
-              cloud infrastructure, automation, security, deployment,
-              and reliability.
+              I enjoy building systems end-to-end — from developing
+              applications and machine learning solutions to
+              automating infrastructure, deploying workloads,
+              monitoring systems, and creating reliable cloud
+              environments.
             </p>
-
+      
             <div className="mt-10 grid gap-4 sm:grid-cols-3">
               <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
                 <p className="text-3xl font-semibold text-white">
                   10+
                 </p>
+      
                 <p className="mt-2 text-sm text-zinc-500">
                   AWS services explored
                 </p>
               </div>
-
+      
               <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
                 <p className="text-3xl font-semibold text-white">
                   7
                 </p>
+      
                 <p className="mt-2 text-sm text-zinc-500">
                   Featured projects
                 </p>
               </div>
-
+      
               <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
                 <p className="text-3xl font-semibold text-white">
                   730
                 </p>
+      
                 <p className="mt-2 text-sm text-zinc-500">
                   Internship hours
                 </p>
@@ -478,22 +553,42 @@ export default function Home() {
           </p>
 
           <h2 className="mt-4 text-4xl font-semibold">
-            Tools I build with.
+            Technologies I work with.
           </h2>
 
-          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {skills.map((skill, index) => (
+          <div className="mt-14 grid gap-6 md:grid-cols-2">
+            {skillCategories.map((category, categoryIndex) => (
               <motion.div
-                key={skill}
+                key={category.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.04 }}
-                className="rounded-2xl border border-white/10 bg-white/[0.02] p-6"
+                transition={{
+                  delay: categoryIndex * 0.08,
+                  duration: 0.5,
+                }}
+                className="rounded-3xl border border-white/10 bg-white/[0.02] p-7 transition hover:border-white/20"
               >
-                <span className="font-medium text-zinc-200">
-                  {skill}
-                </span>
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg font-medium text-white">
+                    {category.title}
+                  </h3>
+          
+                  <span className="text-xs tracking-widest text-zinc-600">
+                    {String(categoryIndex + 1).padStart(2, "0")}
+                  </span>
+                </div>
+          
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {category.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-sm text-zinc-400 transition hover:border-blue-400/40 hover:bg-blue-400/[0.04] hover:text-blue-400"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </div>
